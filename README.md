@@ -11,7 +11,7 @@ FUNCTIONALITIES:
 * Admin can create as many categories as he desires.
 * A business can belong to multiple categories.
 * The general public can search and view listings. Search goes through name and description.
-* A listing contains the name of the business, a description, website URL, contact email, phones and address.
+* A listing contains the name of the business, a description, website URL, phones and address.
 * Listing can have more than one images. 
 * Admin can delete or modify a business listing.
 * Admin can how many views a business listing has had. 
