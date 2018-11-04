@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .center { 
+            height: 50px;
+            position: relative;
+            border: 3px solid green; 
+        }
+        
+        .center p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .tab { 
+               display:inline-block; 
+               margin-left: 40px; 
+        }
+        </style>
+    </head>
+	<body>
+        <center>
+    		<h1>DELETE LISTING!ADMIN!</h1>
+    		<p>
+    			<a href="first.php?data=1"><u>LISTINGS</u><a/>
+    			<a href="createlist.php" class="tab"><u>CREATE</u><a/>
+    			<a href="first.php" class="tab"><u>LOG OUT</u><a/>
+    		</p>
+            <br><br>
+    		<?php
+    			$selected = $_GET["sel"];
+    			$companyName = $_GET["data"];		
+    				
+            	$host = "localhost";
+            	$username = "id4770849_workceo";
+            	$password = "delabEGO234";
+            	$db_name = "id4770849_work";
+    			$con = mysqli_connect( "$host", "$username", "$password", "$db_name" ) or die("cannot connect1");
+    		  
+    			$sql = "DELETE FROM listing WHERE ID = '".$selected."'";
+    			$result = mysqli_query( $con , $sql )
+    			or die ( "Error getting data 2" );
+    			echo( $companyName." DELETED SUCCESSFULLY" );
+    			echo( "<br><form action='jubeeapps.xyz' method='post' enctype='multipart/form-data' ><br>
+    			        <button type='submit' formaction='first.php?data=1'>Continue</button>" );
+    		?>
+    	</center>
+	</body>
+</html>
