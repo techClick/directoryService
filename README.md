@@ -18,28 +18,28 @@ FUNCTIONALITIES:
 * Exposed search functionality via an API.
 
 --SEARCH API>
-    This Listings' search API is AVAILABLE at:
+This Listings' search API is AVAILABLE at:
 
-    'https://www.jubeeapps.000webhostapp.com/workMotus/MTLsearchAPI/searchlistings.php?key="YourKey"&search="SearchCriterea"';
-    Where "YourKey" is the six digit authorization key issued to registered users by the company hosting the business listing API(MTL), 
-    use "MTL345".
-    And "SearchCriterea" is the search criterea for the business the user is looking for.
+'https://www.jubeeapps.000webhostapp.com/workMotus/MTLsearchAPI/searchlistings.php?key="YourKey"&search="SearchCriterea"';
+Where "YourKey" is the six digit authorization key issued to registered users by the company hosting the business listing API(MTL), 
+use "MTL345".
+And "SearchCriterea" is the search criterea for the business the user is looking for.
 
-    This search API RETURNS:
+This search API RETURNS:
 
-    Encoded Json Array as;
-    Output=}Array(5)[Array("x"),Array("x"),Array("x"),Array("x"),Array("x"),Array("x")],
-    where "x" is the number of search results in similar order.
+Encoded Json Array as;
+Output=}Array(5)[Array("x"),Array("x"),Array("x"),Array("x"),Array("x"),Array("x")],
+where "x" is the number of search results in similar order.
 
-    Note:Array references are;
-    Output=}Array(5)[search_result_names,search_result_categories,search_result_description,search_result_address,
-    search_result_number,search_result_url].
+Note:Array references are;
+Output=}Array(5)[search_result_names,search_result_categories,search_result_description,search_result_address,
+search_result_number,search_result_url].
 
-    This search API ERRORS REPORT:
+This search API ERRORS REPORT:
 
-    MTL Regiseration Key Error as;
-    Output=}Array(1)["Key Error" , "nil"].
+MTL Regiseration Key Error as;
+Output=}Array(1)["Key Error" , "nil"].
 
-    And empty search Criterea as;
-    Output=}Array(1)["Error, Empty search" , "nil"].
+And empty search Criterea as;
+Output=}Array(1)["Error, Empty search" , "nil"].
 -->
