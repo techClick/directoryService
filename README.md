@@ -21,23 +21,23 @@ FUNCTIONALITIES:
 This Listings' search API is AVAILABLE at:
 
 'https://www.jubeeapps.000webhostapp.com/workMotus/MTLsearchAPI/searchlistings.php?key="YourKey"&search="SearchCriterea"';
-Where "YourKey" is the six digit authorization key issued to registered users by the company hosting the API(MTL)->use "MTL345"<-, and "SearchCriterea" is the search criterea for the business you're is looking for.
+Where "YourKey" is the six digit authorization key issued to registered users by the company hosting the API(MTL)->use "MTL345"<-, and "SearchCriterea" is the search criterea for the business you're looking for.
 
 This search API RETURNS:
 
 Encoded Json Array as;
-Output>Array(5)[Array("x"),Array("x"),Array("x"),Array("x"),Array("x"),Array("x")],
+Output>Array(5)[ Array("x"), Array("x"), Array("x"), Array("x"), Array("x"), Array("x")],
 where "x" is the number of search results in similar order.
 
-Note:Array references are;
-Output=>Array(5)[search_result_names,search_result_categories,search_result_description,search_result_address,
-search_result_number,search_result_url].
+Note: Array references are;
+Output=>Array(5)[ search_result_names, search_result_categories, search_result_description, search_result_address,
+ search_result_number, search_result_url].
 
 This search API ERRORS REPORT:
 
 MTL Regiseration Key Error as;
-Output=>Array(1)["Key Error" , "nil"].
+Output=>Array(1)[ "Key Error", "nil"].
 
 And empty search Criterea as;
-Output=>Array(1)["Error, Empty search" , "nil"].
+Output=>Array(1)[ "Error, Empty search" , "nil"].
 -->
