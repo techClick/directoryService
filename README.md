@@ -21,9 +21,7 @@ FUNCTIONALITIES:
 This Listings' search API is AVAILABLE at:
 
 'https://www.jubeeapps.000webhostapp.com/workMotus/MTLsearchAPI/searchlistings.php?key="YourKey"&search="SearchCriterea"';
-Where "YourKey" is the six digit authorization key issued to registered users by the company hosting the business listing API(MTL), 
-use "MTL345".
-And "SearchCriterea" is the search criterea for the business the user is looking for.
+Where "YourKey" is the six digit authorization key issued to registered users by the company hosting the API(MTL)->use "MTL345"<-, and "SearchCriterea" is the search criterea for the business you're is looking for.
 
 This search API RETURNS:
 
