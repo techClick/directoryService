@@ -26,18 +26,18 @@ Where "YourKey" is the six digit authorization key issued to registered users by
 This search API RETURNS:
 
 Encoded Json Array as;
-Output=}Array(5)[Array("x"),Array("x"),Array("x"),Array("x"),Array("x"),Array("x")],
+Output>Array(5)[Array("x"),Array("x"),Array("x"),Array("x"),Array("x"),Array("x")],
 where "x" is the number of search results in similar order.
 
 Note:Array references are;
-Output=}Array(5)[search_result_names,search_result_categories,search_result_description,search_result_address,
+Output=>Array(5)[search_result_names,search_result_categories,search_result_description,search_result_address,
 search_result_number,search_result_url].
 
 This search API ERRORS REPORT:
 
 MTL Regiseration Key Error as;
-Output=}Array(1)["Key Error" , "nil"].
+Output=>Array(1)["Key Error" , "nil"].
 
 And empty search Criterea as;
-Output=}Array(1)["Error, Empty search" , "nil"].
+Output=>Array(1)["Error, Empty search" , "nil"].
 -->
