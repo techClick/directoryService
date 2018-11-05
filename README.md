@@ -2,7 +2,7 @@
 
 CLASSIC DIRECTORY SERVICE.
 
-A Task given to me by Motus Technologies as an Interview for a Lead Software Developement Position.
+An 86-Hour Task(Three and half days) given to me by Motus Technologies as an Interview for a Lead Software Developement Position.
 Ensure to place all files in a folder called "workMotus",
 and "searchlistings.php" in a folder called "MTLsearchAPI" located in "/workMotus".
 
