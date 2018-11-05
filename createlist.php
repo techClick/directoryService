@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head>
+	<head>
         <style>
-            @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+                    @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
             
             :root {
             	/* Base font size */
@@ -51,7 +51,7 @@
             	font-size: calc(2.8em + 2.6vw);
             	font-weight: 700;
             	letter-spacing: .01em;
-            	padding: 10rem 0 0 0rem;
+            	padding: 6rem 0 0 0rem;
             	text-shadow: .022em .022em .022em #111;
             	color: #fff;
             }
@@ -95,20 +95,47 @@
             }
         </style>
     </head>
-	<body>
-		<center>
-    		<h1>ADMIN LOGIN</h1>
-    		<p>
-    			<a href="first.php?data=2">LISTINGS<a/> 
-    			<a href="login.php" class = "tab">ADMIN<a/> 
-    		</p>
-    		<form action="first.php" method="post" enctype="multipart/form-data" >
-    			<span class="center">Administration key:</span><br>
-    		    <br>
-    			<input type="text" name="user" >
-    			<input type="submit" value="login" name=
-    			"sub">
-    		</form>
-		</center>
-	</body>
+    <body>
+        <center>
+        <h1>CREATE BUSINESS LISTING</h1>
+		<p>
+			<a href="first.php?data=1"><u>LISTINGS</u><a/>
+			<a href="first.php" class="tab"><u>LOG OUT</u><a/>
+		</p>
+        <br>
+        <form action="savelist.php" method="post" enctype="multipart/form-data" >
+            <span>NAME*:</span><br>
+            <input type="text" name="name" >
+            <br><br>
+            <span>DESCRIPTION*:</span><br>
+            <textarea type = "text" name="desc" rows="10" cols="40"></textarea>
+            <br><br>
+            <span>ADDRESS:</span><br>
+            <input type="text" name="add" >
+            <br><br>
+            <span>MOBILE:</span><br>
+            <input type="text" name="photo" >
+            <br><br>
+            <span>URL:</span><br>
+            <input type="text" name="url" >
+            <br><br>
+            <span>CATEGORY*:</span><br>
+            <input type="text" name="cat" >
+            <br><span>Seperate each category with a comma e.g; ICT, Engineering, e.t.c<br></span>
+    		<br><br>
+    		<span>PICTURES:</span><br>
+    		<span><input type="file" name="pic[]" multiple></span>
+    		<br>
+    		<span>Drag mouse over multiple pictures or hold Ctrl/Shift button and select multiple pictures.<br>
+    		Only five(5) pictures allowed.</span> 
+    		<br>
+            <br><br>
+            <input type="submit" value="Submit">
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+        </form> 
+        </center>
+    </body>
 </html>

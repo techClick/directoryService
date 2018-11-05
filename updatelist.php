@@ -2,24 +2,97 @@
 <html>
     <head>
         <style>
-        .center { 
-            height: 50px;
-            position: relative;
-            border: 3px solid green; 
-        }
-        
-        .center p {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-        .tab { 
-               display:inline-block; 
-               margin-left: 40px; 
-        }
+                    @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+            
+            :root {
+            	/* Base font size */
+            	font-size: 10px;
+            
+            	/* Heading height variable*/
+            	--heading-height: 30em;
+            }
+            
+            body {
+            	font-family: "Roboto", Arial, sans-serif;
+            	min-height: 100vh;
+            	background-color: #101010;
+            }
+            
+            u {
+            	font-size: 16px;
+            }
+            
+            header {
+            	position: fixed;
+            	width: 100%;
+            	height: var(--heading-height);
+            }
+            
+            /* Create angled background with 'before' pseudo-element */
+            header::before {
+            	content: "";
+            	display: block;
+            	position: absolute;
+            	left: 0;
+            	bottom: 6em;
+            	width: 100%;
+            	height: calc(var(--heading-height) + 10em);
+            	z-index: -1;
+            	transform: skewY(-3.5deg);
+            	background: 
+            		linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+            		url(https://images.unsplash.com/photo-1495464101292-552d0b52fe41?auto=format&fit=crop&w=1350&q=80) no-repeat center,
+            		linear-gradient(#4e4376, #2b5876);
+            	background-size: cover;
+            	border-bottom: .2em solid #fff;
+            }
+            
+            h1 {
+            	font-size: calc(2.8em + 2.6vw);
+            	font-weight: 700;
+            	letter-spacing: .01em;
+            	padding: 10rem 0 0 0rem;
+            	text-shadow: .022em .022em .022em #111;
+            	color: #fff;
+            }
+            
+            main {
+            	padding: calc(var(--heading-height) + 1.5vw) 4em 0;
+            }
+            
+            p {
+            	font-size: calc(2em + .25vw);
+            	font-weight: 400;
+            	line-height: 2;
+            	margin-bottom: 1.5em;
+            	color: #fcfcfc;
+            }
+            span {
+            	font-size: calc(1.5em + .25vw);
+            	font-weight: 400;
+            	line-height: 2;
+            	margin-bottom: 1.5em;
+            	color: #fcfcfc;
+            }
+    
+            .center { 
+                height: 45px;
+                position: relative;
+                border: 3px solid green; 
+            }
+            
+            .center p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            .tab { 
+                   display:inline-block; 
+                   margin-left: 40px; 
+            }
         </style>
     </head>
 	<body>
@@ -30,15 +103,15 @@
     			<a href="createlist.php" class="tab"><u>CREATE</u><a/>
     			<a href="first.php" class="tab"><u>LOG OUT</u><a/>
     		</p>
-    		<br>
     		<?php
     		    $sel = $_GET["sel"];
     			if ( $_POST["name"] != NULL && $_POST["desc"] != NULL && $_POST["category"] != NULL){
     				$databaseNames = $_POST["name"];
     				$databaseDesc = $_POST["desc"];		
     			}else{
-    				echo("ERROR! Not enought data to create listing");
-    				die( "<br><button type='submit' formaction='createlist.php'>Back</button>" );
+    				echo("<span>ERROR! Not enought data to create listing</span>");
+    			    echo( "<form action='createlist.php' method='post'> 
+    			                <br><input type='submit' value='Continue'/></form>" );
     			}
     			$databaseAddress = $_POST["add"];
     			$databasePhone = $_POST["phone"];
@@ -60,6 +133,7 @@
                         $files = scandir($target_dir);
                         $picturesHere = count($files)-1;
     					$pathHere = $_FILES["pic"]["name"][$i];
+    					///echo("<span>pathHere is ".$pathHere."</span>");
     					$extension = strtolower( pathinfo($pathHere, PATHINFO_EXTENSION) );
     					global $databasePicTmp;
     					$databasePicTmp[] = "picture".$picturesHere.".".$extension;
@@ -96,7 +170,7 @@
     						}
     					}
     					if ($uploadOk == 0) {
-    						echo( $errorText );
+    						echo( "<span>".$errorText."</span>" );
     			            echo( "<form action='createlist.php' method='post'> 
     			                <br><input type='submit' value='Continue'/></form>" );
     			            die();
@@ -146,10 +220,11 @@
     			$sql = "UPDATE listing SET pictures = '".$databasePic."' WHERE ID = '".$sel."'";
     			$result = mysqli_query( $con , $sql )
     			or die ( "Error" );
-    			echo("".$databaseNames." HAS BEEN UPDATED");
+    			echo("<span>".$databaseNames." HAS BEEN UPDATED</span>");
     			
     			echo( "<form action='first.php?data=1' method='post'> 
     			        <br><input type='submit' value='Continue'/></form>" );
+    			mysqli_close($con);
     			
     		?>
 		</center>
