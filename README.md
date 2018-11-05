@@ -29,7 +29,7 @@ This Listings search API is AVAILABLE at:
 This search API RETURNS:
 
 Encoded Json Array as;
-Output>Array(6)[ Array("x"), Array("x"), Array("x"), Array("x"), Array("x"), Array("x")],
+Output=>Array(6)[ Array("x"), Array("x"), Array("x"), Array("x"), Array("x"), Array("x")],
 "x" is the number of search results in similar order.
 
 Note: Array references are;
