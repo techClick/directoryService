@@ -21,19 +21,19 @@ FUNCTIONALITIES:
 * Exposed search functionality via an API.
 
 --SEARCH API>
-This Listings' search API is AVAILABLE at:
+This Listings search API is AVAILABLE at:
 
 'http://jubeeapps.000webhostapp.com/workMotus/MTLsearchAPI/searchlistings.php?key="YourKey"&search="SearchCriterea"';
-Where "YourKey" is the six digit authorization key issued to registered users by the company hosting the API(MTL)->use "MTL345"<-, and "SearchCriterea" is the search criterea for the business you're looking for.
+"YourKey" is the six digit authorization key issued to registered users by the company hosting the API(MTL)->use "MTL345"<-, and "SearchCriterea" is the search criterea for the business you're looking for.
 
 This search API RETURNS:
 
 Encoded Json Array as;
-Output>Array(5)[ Array("x"), Array("x"), Array("x"), Array("x"), Array("x"), Array("x")],
-where "x" is the number of search results in similar order.
+Output>Array(6)[ Array("x"), Array("x"), Array("x"), Array("x"), Array("x"), Array("x")],
+"x" is the number of search results in similar order.
 
 Note: Array references are;
-Output=>Array(5)[ search_result_names, search_result_categories, search_result_description, search_result_address,
+Output=>Array(6)[ search_result_names, search_result_categories, search_result_description, search_result_address,
  search_result_number, search_result_url].
 
 This search API ERRORS REPORT:
