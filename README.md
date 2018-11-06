@@ -17,7 +17,7 @@ FUNCTIONALITIES:
 * A listing contains the name of the business, a description, website URL, phones and address.
 * Listing can have more than one images. 
 * Admin can delete or modify a business listing.
-* Admin can how many views a business listing has had. 
+* Admin can know how many views a business listing has had. 
 * Exposed search functionality via an API.
 
 --SEARCH API>
