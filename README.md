@@ -29,9 +29,7 @@ This Listings search API is AVAILABLE at:
 This search API RETURNS:
 
 Encoded Json Array as;
-Output=>Array(6)[ Array("x"), Array("x"), Array("x"), Array("x"), Array("x"), Array("x")],
-"x" is the number of search results in similar order.
-
+Output=>Array(6)[ Array("x"), Array("x"), Array("x"), Array("x"), Array("x"), Array("x")]. "x" is the number of search results in similar order.
 Note: Array references are;
 Output=>Array(6)[ search_result_names, search_result_categories, search_result_description, search_result_address,
  search_result_number, search_result_url].
