@@ -109,9 +109,10 @@
     				$databaseNames = $_POST["name"];
     				$databaseDesc = $_POST["desc"];		
     			}else{
-    				echo("<span>ERROR! Not enought data to create listing</span>");
-    			    echo( "<form action='createlist.php' method='post'> 
+    				echo("<span>ERROR! Not enought data to update listing</span>");
+    			    echo( "<form action='selectadmin.php?sel=".$sel."' method='post'> 
     			                <br><input type='submit' value='Continue'/></form>" );
+    			    die();
     			}
     			$databaseAddress = $_POST["add"];
     			$databasePhone = $_POST["phone"];
