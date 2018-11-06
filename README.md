@@ -2,10 +2,10 @@
 
 CLASSIC DIRECTORY SERVICE.
 
-An 86-Hour Task(Three and half days) given to me by Motus Technologies as an Interview for a Lead Software Developement Position.
+An 72-Hour Task given to me by Motus Technologies as a test for a Lead Software Developement Position.
 Ensure to place all files in a folder called "workMotus",
 and "searchlistings.php" in a folder called "MTLsearchAPI" located in "/workMotus".
-You can test the completed project and it's functionalities below by going to the page:
+You can test the completed project and it's functionalities directly by going to the page:
 http://jubeeapps.000webhostapp.com/workMotus/first.php
 Note: "first.php" is the index page.
 
