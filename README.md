@@ -2,7 +2,7 @@
 
 CLASSIC DIRECTORY SERVICE.
 
-An 72-Hour Task given to me by Motus Technologies as a test for a Lead Software Developement Position.
+An 72-Hour Task given to me by Motus Technologies as a test for a Software Developement Position.
 Ensure to place all files in a folder called "workMotus",
 and "searchlistings.php" in a folder called "MTLsearchAPI" located in "/workMotus".
 You can test the completed project and it's functionalities directly by going to the page:
